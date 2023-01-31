@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/demo-mount/Voldemort/Downloads/simbot_sign_detection/build/code.js.S
+
+/demo-mount/Voldemort/Downloads/simbot_sign_detection/build/index.html.S
+
+/demo-mount/Voldemort/Downloads/simbot_sign_detection/build/style.css.S
+

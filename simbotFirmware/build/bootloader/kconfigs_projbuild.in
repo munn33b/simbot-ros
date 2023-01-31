@@ -1,0 +1,4 @@
+source "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/partition_table/Kconfig.projbuild"

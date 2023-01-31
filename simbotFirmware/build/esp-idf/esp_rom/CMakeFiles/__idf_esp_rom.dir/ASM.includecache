@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S
+xtensa/corebits.h
+-
+sdkconfig.h
+-
+
+/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/xtensa/include/xtensa/corebits.h
+
+config/sdkconfig.h
+

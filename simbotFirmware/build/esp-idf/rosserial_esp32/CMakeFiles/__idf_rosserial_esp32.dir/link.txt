@@ -1,0 +1,2 @@
+/home/muneeb/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc librosserial_esp32.a  CMakeFiles/__idf_rosserial_esp32.dir/duration.cpp.obj CMakeFiles/__idf_rosserial_esp32.dir/time.cpp.obj CMakeFiles/__idf_rosserial_esp32.dir/esp_ros_wifi.c.obj
+/home/muneeb/.espressif/tools/xtensa-esp32-elf/esp-2021r2-patch5-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib librosserial_esp32.a

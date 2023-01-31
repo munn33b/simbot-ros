@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/demo-mount/Voldemort/Downloads/simbot_sign_detection/build/bootloader",
+    "config_file":        "/demo-mount/Voldemort/Downloads/simbot_sign_detection/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4.3-173-g1f63dc70b8",
+    "target":             "esp32",
+    "rev":                "0",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/efuse/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp32/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_common/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_hw_support/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_system/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/freertos/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/hal/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/log/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/newlib/Kconfig;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader/Kconfig.projbuild;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_rom/Kconfig.projbuild;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esptool_py/Kconfig.projbuild;/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader_support", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/efuse", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp32", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_common", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_hw_support", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_rom", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esp_system", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/esptool_py", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/freertos", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/hal", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/log", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader/subproject/main", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/bootloader/subproject/components/micro-ecc", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/newlib", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/partition_table", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/soc", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/spi_flash", "/demo-mount/Voldemort/Downloads/ESP-IDFv4.4/esp-idf/components/xtensa", "" ]
+}
