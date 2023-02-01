@@ -41,7 +41,10 @@ SIMBOT can be hard programmed for simple tasks such as LED Blink if close to obs
 
 **SIMBOT Playing Soccer**
 
-<video style = "height: 510px; width: 500px;" src="./assets/images/vlc-record-2023-01-31-00h45m04s-day4.mp4-.mp4"></video>
+https://user-images.githubusercontent.com/101054147/215968848-245ea90e-31a0-4887-9fc6-db134ba5d629.mp4
+
+
+
 
 In the above example, SIMBOT is controlled wirelessly through web interface.
 
