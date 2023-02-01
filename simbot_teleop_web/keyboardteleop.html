@@ -8,22 +8,73 @@
 <link rel="stylesheet" type="text/css"
   href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./build/style.css" />
+  <link rel="stylesheet" type="text/css" href="./build/font.css" />
+  <link rel="stylesheet" type="text/css" href="./build/bootstrap.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <!---<script src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script> --->
-<script src"https://unpkg.com/eventemitter2@6.4.9/lib/eventemitter2.js"></script>
-<script src="./build/keyboardteleop.js"></script>
-	<script type="text/javascript" src="./build/roslib.min.js">
-  </script>
+    <script src"https://unpkg.com/eventemitter2@6.4.9/lib/eventemitter2.js"></script>
+    <script src="./build/keyboardteleop.js"></script>
+	<script type="text/javascript" src="./build/roslib.min.js"></script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/leo.js"></script>
+
+
 
 </head>
+<!-- onload=init() -->
+<body>
+<nav class="navbar navbar-expand-md bg-bar">
+		<div class="container-fluid">
 
-<body onload=init()>
-  <h1 style="text-align: center;">SimBot Keyboard TeleOp</h1>
+			<div class="col-2 navbar-brand" href="#">
+				<img class="rounded" src="./img/brainswarm.jpg" alt="Logo" style="width: 70px; height: 40px;"/>
+			</div>
+
+			<div class="col-3" >
+				<!--
+				<div id="batteryID" class="center-fit" style="width: 70px; height: 40px; color: aliceblue; text-align: center;">Voltage: 0V</div>
+				-->
+			</div>
+
+			<div class="col-2 text-center">
+				<button class="bg-dark btn-sm mx-auto" style="width: 45px; height: 45px;" type="button" onclick="fullScreen()">
+					<img class="rounded img-fluid" src="img/nav-bar-fullscreen.svg" alt="FullScreen" style="width: 25px; height: 25px;"/>
+				</button>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="col-5 collapse navbar-collapse ml-auto" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+				<li class="nav-item ml-auto">
+					<button id="home_btn" type="button" class="btn btn-danger btn-green btn-sm custom-btn mt-2 ml-3" onclick="ros_connect()">Connect to Server</button>
+				</li>
+				<!-- <li class="nav-item ml-auto">
+					<button type="button" class="btn btn-warning btn-sm custom-btn mt-2 ml-3" onclick="streamReboot()">Reboot stream</button>
+				</li> -->
+				<!--
+				<li class="nav-item ml-auto">
+					<button type="button" class="btn btn-warning btn-sm custom-btn mt-2 ml-3" onclick="systemReboot()">Reboot</button>
+				</li>
+				<li class="nav-item ml-auto">
+					<button type="button" class="btn btn-danger btn-sm custom-btn mt-2 ml-3" onclick="turnOff()">Shutdown</button>
+				</li>
+				-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--
+	 <h1 style="text-align: center;">SimBot Keyboard TeleOp</h1>
   <!--
   <p>Run the following commands in the terminal then refresh this page. Check the JavaScript
     console for the output.</p>
-  -->
+  --><!--
   <ol>
 
     <li>Use your following keys on your keyboard to move the robot (must have this browser window
@@ -34,18 +85,27 @@
     <li style="text-align: center;">d: Turn Right</li>
 
   </ol>
+  -->
+  <!--
   <div id="speed-label"></div>
   <div id="speed-slider"></div>
+	-->
+
+	<div class="justify-content-center" style="margin-top: -70px; min-width: 100%; min-height: 100%; ">
+		<img src="" class="p-1 center-fit" alt="" id="video" style="background-size: cover"></img>
+	<div>
+
+
 </body>
   <script>
   /**
-   * Setup all GUI elements when the page is loaded. 
+   * Setup all GUI elements when the page is loaded.
    */
 function init() {
     // Connecting to ROS.
-    var ros = new ROSLIB.Ros({
-      url : 'ws://localhost:9090'
-    });
+//    var ros = new ROSLIB.Ros({
+//      url : 'ws://localhost:9090'
+//    });
 
     // Initialize the teleop.
     var teleop = new KEYBOARDTELEOP.Teleop({
@@ -53,26 +113,67 @@ function init() {
       topic : '/teleop',
       messageType: 'simbot_msgs/TeleopMove'
     });
+}
 
     // Create a UI slider using JQuery UI.
-    $('#speed-slider').slider({
-      range : 'min',
-      min : 0,
-      max : 100,
-      value : 100,
-      slide : function(event, ui) {
-        // Change the speed label.
-        $('#speed-label').html('Speed: ' + ui.value + '%');
-        // Scale the speed.
-        teleop.scale = (ui.value / 100.0);
-      }
-    });
+//    $('#speed-slider').slider({
+//      range : 'min',
+//      min : 0,
+//      max : 100,
+//      value : 100,
+//      slide : function(event, ui) {
+//        // Change the speed label.
+//        $('#speed-label').html('Speed: ' + ui.value + '%');
+//        // Scale the speed.
+//        teleop.scale = (ui.value / 100.0);
+//      }
+//    });
+//
+//    // Set the initial speed .
+//    $('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
+//    teleop.scale = ($('#speed-slider').slider('value') / 100.0);
+//  }
+</script>
+<script>
 
-    // Set the initial speed .
-    $('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
-    teleop.scale = ($('#speed-slider').slider('value') / 100.0);
-  }
+var connected;
+var ros = new ROSLIB.Ros();
+
+function ros_connect() {
+    if (connected === false) {
+    document.getElementById('home_btn').innerHTML = "Connect to Server";
+    var h = document.getElementById('home_btn');
+    h.style.background = 'green';
+      connected = true;
+      ros.close();
+    }
+
+    else {
+    console.log(connected);
+    ros_init();
+    }
+
+}
+
+//function ros_deinit() {
+//  ros.close();
+//}
+
+function ros_init() {
+    ros.connect('ws://localhost:9090');
+    connected = false;
+    init();
+    document.getElementById('home_btn').innerHTML = "Disconnect";
+    var h = document.getElementById('home_btn');
+    h.style.background = 'red';
+//    if (document.getElementById('home_btn').innerHTML === "Disconnect"){
+//      ros.close();
+//      document.getElementById('home_btn').innerHTML = "Connect to Server";
+//      var h = document.getElementById('home_btn');
+//      h.style.background = 'green';
+//      console.log("Disconnect");
+//    }
+}
 </script>
 
 </html>
-
