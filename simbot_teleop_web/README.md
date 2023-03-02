@@ -17,5 +17,5 @@ This Repo depends on:
 roslibjs is released with a BSD license. For full terms and conditions, see the [LICENSE](LICENSE) file.
 
 ### Authors
-See the [AUTHORS.md](AUTHORS) file for a full list of contributors.
+See the [AUTHORS.md](https://github.com/munn33b/simbot-ros/blob/main/simbot_teleop_web/AUTHORS.md) file for a full list of contributors.
 
