@@ -160,7 +160,7 @@ function ros_connect() {
 //}
 
 function ros_init() {
-    ros.connect('ws://localhost:9090');
+    ros.connect('wss://bridge.headstartguide.com/robot1');
     connected = false;
     init();
     document.getElementById('home_btn').innerHTML = "Disconnect";

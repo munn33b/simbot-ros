@@ -51,7 +51,7 @@ KEYBOARDTELEOP.Teleop = function(options) {
   }
   var test = 0;
 
-  listener.subscribe(handler) 
+  listener.subscribe(handler)
   //listener.unsubscribe();
     //count = m.data;
     //console.log(count);
@@ -65,7 +65,7 @@ KEYBOARDTELEOP.Teleop = function(options) {
     var oldX = x;
     var oldY = y;
     var oldZ = z;
-    
+
     var pub = true;
 
     var speed = 0;
@@ -73,13 +73,13 @@ KEYBOARDTELEOP.Teleop = function(options) {
     // throttle the speed by the slider and throttle constant
     if (keyDown === true) {
       speed = 1;
-      console.log(speed);
+      console.log("Speed", speed);
     }
     // check which key was pressed
     switch (keyCode) {
       case 65:
         // turn left
-        z = 1 * speed;
+        x = -2 * speed;
         break;
       case 87:
         // up
@@ -87,7 +87,7 @@ KEYBOARDTELEOP.Teleop = function(options) {
         break;
       case 68:
         // turn right
-        z = -1 * speed;
+        x = 2 * speed;
         break;
       case 83:
         // down
@@ -122,16 +122,17 @@ KEYBOARDTELEOP.Teleop = function(options) {
       //cmdVel.publish(twist);
   var cmdVel = new ROSLIB.Topic({
     ros : ros,
-    name : "/robot" + (count) + topic,
-    messageType : 'simbot_msgs/TeleopMove'
+    name : "/ping/primitive",
+    messageType : 'std_msgs/Int32'
   });
 
      listener.unsubscribe();
 
 
       var move_msg = new ROSLIB.Message({
-        str: x,
-        turn: z
+        //str: x,
+        //turn: z
+        data: x,
       })
 
       cmdVel.publish(move_msg);
@@ -140,6 +141,11 @@ KEYBOARDTELEOP.Teleop = function(options) {
       // check for changes
       if (oldX !== x || oldY !== y || oldZ !== z) {
         that.emit('change', move_msg);
+        console.log("IF");
+      }
+      else if (oldX !== x || oldY !== y || oldZ !== z) {
+        that.emit('change', move_msg);
+        console.log("Else IF");
       }
     }
   };
